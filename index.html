@@ -38,44 +38,46 @@
   <main id="main">
     <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="availability">Open to freelance projects and new part-time roles</p>
-          <h1>Documentation that makes complex products <span class="accent">easy to use</span>.</h1>
-          <p class="lead">I'm Tammy, a senior technical writer based in Israel. For 13 years I've documented software and hardware for cybersecurity, cloud, medical, automotive and robotics companies, and I build the automation and AI tools that keep documentation fast and consistent.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="portfolio.html">See my work</a>
-            <a class="btn btn-ghost" href="resume.html">Read my résumé</a>
-          </div>
+      <div class="container">
+        <!-- TODO: Edit or delete this availability line to match what you're looking for. -->
+        <p class="availability">Open to freelance projects and new roles</p>
+        <h1>Documentation that makes complex products <span class="accent">easy to use</span>.</h1>
+
+        <!-- ===== Key numbers ===== -->
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><strong>13 years</strong><span>writing software and hardware documentation</span></div>
+          <div class="stat" role="listitem"><strong>300+</strong><span>Help Center articles owned as sole writer</span></div>
+          <div class="stat" role="listitem"><strong>Up to 50%</strong><span>faster first drafts with AI agents I built</span></div>
+          <div class="stat" role="listitem"><strong>21</strong><span>product releases of release notes</span></div>
         </div>
-        <div class="portrait">
-          <!-- Profile photo in three sizes. The browser loads only the one
-               the screen needs: 320 px wide for standard screens, 640 px for
-               most phones and Retina displays, 960 px for very high-density screens. -->
-          <img src="images/profile-640x915.png"
-               srcset="images/profile-320x458.png 320w, images/profile-640x915.png 640w, images/profile-960x1372.png 960w"
-               sizes="(max-width: 860px) 260px, 320px"
-               alt="Tammy Paul" width="640" height="915" decoding="async">
+
+        <!-- ===== Photo and introduction ===== -->
+        <div class="intro">
+          <div class="portrait">
+            <!-- Profile photo in three sizes. The browser loads only the one the screen needs. -->
+            <img src="images/profile-640x915.png"
+                 srcset="images/profile-320x458.png 320w, images/profile-640x915.png 640w, images/profile-960x1372.png 960w"
+                 sizes="(max-width: 640px) 130px, 160px"
+                 alt="Tammy Paul" width="640" height="915" decoding="async">
+          </div>
+          <div>
+            <p class="lead">I'm Tammy, a senior technical writer based in Israel. For 13 years I've documented software and hardware for cybersecurity, cloud, medical, automotive and robotics companies, and I build the automation and AI tools that keep documentation fast and consistent.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="portfolio.html">See my work</a>
+              <a class="btn btn-ghost" href="resume.html">Read my résumé</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Key numbers ===== -->
-    <div class="container">
-      <div class="stats" role="list">
-        <div class="stat" role="listitem"><strong>13 years</strong><span>writing software and hardware documentation</span></div>
-        <div class="stat" role="listitem"><strong>300+</strong><span>Help Center articles owned as sole writer</span></div>
-        <div class="stat" role="listitem"><strong>21</strong><span>product releases of release notes</span></div>
-        <div class="stat" role="listitem"><strong>Up to 50%</strong><span>faster first drafts with AI agents I built</span></div>
-      </div>
-    </div>
 
     <!-- ===== Services ===== -->
     <section class="section" aria-labelledby="services-title">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">How I can help</p>
-          <h2 id="services-title">Writing, translation and documentation consulting</h2>
+          <h2 id="services-title">Product documentation, plus the automation and AI tools that keep it current</h2>
           <p>I work directly with product managers, developers, QA and UX to turn specs and product changes into content that customers can act on.</p>
         </div>
         <div class="grid-3">
@@ -83,16 +85,6 @@
             <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg></div>
             <h3>Help Center and product docs</h3>
             <p>Task-based articles, how-to guides and user guides for SaaS platforms and hardware, written for the people who actually use the product.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div>
-            <h3>Release notes</h3>
-            <p>Concise internal and customer-facing release notes and feature announcements, delivered on the release schedule.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
-            <h3>API documentation</h3>
-            <p>REST API references with request and response examples and JSON schemas, written with R&amp;D in tools like Stoplight.</p>
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
@@ -103,6 +95,16 @@
             <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5z"/></svg></div>
             <h3>AI-assisted authoring</h3>
             <p>Custom AI agents backed by style, terminology and product briefs, with a human review step to keep content accurate.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
+            <h3>API documentation</h3>
+            <p>REST API references with request and response examples and JSON schemas, written with R&amp;D in tools like Stoplight.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Release notes</h3>
+            <p>Concise internal and customer-facing release notes and feature announcements, delivered on the release schedule.</p>
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M10 5c0 3-2 6-6 8"/><path d="M13 21l4-9 4 9M14.5 18h5"/></svg></div>

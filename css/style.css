@@ -135,6 +135,15 @@ a:hover { color: var(--blue); }
 .brand img { width: 52px; height: 52px; }
 .brand span { font-family: var(--font-head); font-weight: 600; font-size: 1.1rem; }
 
+/* Larger logo on computer screens, where there's room for it.
+   Phones keep the compact 52 px header. */
+@media (min-width: 861px) {
+  .header-inner { min-height: 104px; }
+  .brand { gap: 1rem; }
+  .brand img { width: 88px; height: 88px; }
+  .brand span { font-size: 1.25rem; }
+}
+
 .nav-toggle {
   display: none;
   background: none; border: 1px solid var(--line); border-radius: 8px;
@@ -321,7 +330,7 @@ a:hover { color: var(--blue); }
 
 /* ---------- Résumé ---------- */
 .resume-layout { display: grid; grid-template-columns: 260px 1fr; gap: 3rem; align-items: start; }
-.resume-aside { position: sticky; top: 96px; }
+.resume-aside { position: sticky; top: 128px; }
 .resume-aside nav ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
 .resume-aside nav a {
   display: block; padding: .4rem .75rem; border-left: 2px solid var(--line);
@@ -334,7 +343,7 @@ a:hover { color: var(--blue); }
   .resume-aside nav { display: none; }
 }
 
-.resume-section { margin-bottom: 3rem; scroll-margin-top: 96px; }
+.resume-section { margin-bottom: 3rem; scroll-margin-top: 128px; }
 .resume-section > h2 {
   font-size: 1.35rem; padding-bottom: .5rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem;
 }
@@ -375,7 +384,7 @@ a:hover { color: var(--blue); }
 .site-footer { border-top: 1px solid var(--line); padding: 2.5rem 0; margin-top: 2rem; }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .footer-brand { display: flex; align-items: center; gap: 1rem; }
-.footer-brand img { width: 84px; height: 84px; }
+.footer-brand img { width: 140px; height: 140px; }
 .footer-brand p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
 .footer-links { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; padding: 0; margin: 0; }
 .footer-links a { color: var(--ink); text-decoration: none; }

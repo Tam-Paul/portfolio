@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Tammy Paul, Senior Technical Writer</title>
+  <meta name="description" content="Writing samples and documentation projects by Tammy Paul: Help Center articles, API reference, release notes, AI authoring agents and docs-as-code automation.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tammy Paul, home">
+        <img src="images/logo.svg" alt="" width="52" height="52">
+        <span>Tammy Paul</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="resume.html">Résumé</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Selected work</h1>
+        <p>A mix of published writing samples and process projects. The samples show the range of content I write: procedures, rule configuration, API reference and release notes. The projects show how I make documentation faster to produce and easier to maintain.</p>
+      </div>
+    </section>
+
+    <!--
+      HOW TO ADD A LINK TO A CARD
+      Each card ends with a "work-links" block. Where you see
+        <span class="placeholder-link">Link coming soon</span>
+      replace it with a real link, for example:
+        <a href="https://example.com/article">Read the article</a>
+      For a PDF sample, put the file in the "files" folder and link to it:
+        <a href="files/my-sample.pdf">Download the PDF</a>
+      To hide a card completely, delete everything from <article> to </article>.
+    -->
+
+    <!-- ===== Writing samples ===== -->
+    <section class="section" aria-labelledby="samples-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Writing samples</p>
+          <h2 id="samples-title">Published documentation</h2>
+          <p class="filter-note">Written for Cynet's unified AI-powered security platform as the company's sole technical writer.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="work">
+            <p class="meta">How-to guide · Cynet Help Center</p>
+            <h3>SIEM Cold Data Export</h3>
+            <p>Step-by-step instructions for downloading archived SIEM data, covering three download methods (AWS CLI, WinSCP and Cyberduck) with screenshots for each.</p>
+            <p><strong>Note:</strong> The PDF shows a lightly edited version.</p>
+            <ul class="tags"><li>Procedures</li><li>SIEM</li><li>AWS CLI</li></ul>
+            <div class="work-links">
+              <a href="files/SIEM_Cold_Data_Export.pdf">Download the PDF</a>
+              <a href="https://help.cynet.com/en/articles/411">View the live article</a>
+            </div>
+          </article>
+
+          <article class="work">
+            <p class="meta">Configuration guide · Cynet Help Center</p>
+            <h3>Custom XDR Rules</h3>
+            <p>A guide to creating and managing custom detection rules in the platform.</p>
+            <p><strong>Note:</strong> The PDF shows a lightly edited version.</p>           
+            <ul class="tags"><li>Configuration</li><li>XDR</li><li>Detection rules</li></ul>
+            <div class="work-links">
+              <a href="files/Custom_XDR_Rules.pdf">Download the PDF</a>
+              <a href="https://help.cynet.com/en/articles/394">View the live article</a>
+            </div>
+          </article>
+
+          <article class="work">
+            <p class="meta">API reference · Stoplight</p>
+            <h3>Post Misconfigurations API</h3>
+            <p>A REST API reference page with endpoint and parameter descriptions, written in Stoplight in partnership with R&amp;D.</p>
+            <p><strong>Note:</strong> If any discrepencies exist between the PDF and the live API reference these are likely due to updates made after I left Cynet.</p>
+            <ul class="tags"><li>REST API</li><li>Stoplight</li><li>JSON</li><li>OpenAPI</li></ul>
+            <div class="work-links">
+              <a href="files/Post_Misconfigurations_API.pdf">Download the PDF</a>
+              <a href="https://help.api.cynet.com/docs/API-V3/1ubynri207hz7-post-misconfigurations">View the live API reference</a>
+            </div>
+          </article>
+
+          <article class="work">
+            <p class="meta">Release notes · Cynet Help Center</p>
+            <h3>Cynet Release Notes</h3>
+            <p>Internal and customer-facing release notes and feature announcements across endpoint, identity, SIEM, investigation and multi-site administration. The style is concise, enterprise-focused and friendly.</p>
+            <p>Releases I worked on included versions 4.17 - 5.0, all of which can be accessed on the Cynet Help Center.</p>
+            <ul class="tags"><li>Release notes</li><li>SaaS</li><li>Feature announcements</li></ul>
+            <div class="work-links">
+              <a href="https://help.cynet.com/en/articles/416-release-notes-v5-0-saas">Cynet Version 5.0 Release Notes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Process projects ===== -->
+    <section class="section section-tint" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Making documentation faster and easier to maintain</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="work work-featured">
+            <p class="meta">Docs-as-code · MkDocs · Markdown</p>
+            <h3>Rebuilding a 1,100-page partner guide workflow</h3>
+            <div class="work-body">
+              <div>
+                <p>A technology partner's 1,100–1,300-page guide had to be rebranded for every release, 13 times over two years. The original process went from PDF to Word and back to PDF by hand and took more than a week each time.</p>
+                <p>I replaced it with a docs-as-code process: the partner's Markdown source, a reusable set of 30–40 search-and-replace terms built with AI assistance, and an MkDocs build. When I moved to a new machine, I set up the build environment again on my own so the process stayed repeatable.</p>
+              </div>
+              <div class="outcome">
+                <p><strong>Result</strong></p>
+                <p>Turnaround dropped from more than a week to 1.5–2 days per release.</p>
+                <ul class="tags"><li>MkDocs</li><li>Markdown</li><li>Notepad++</li><li>Process design</li></ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <p class="meta">AI-assisted authoring</p>
+            <h3>Release Notes Drafter and Help Center Draft Writer</h3>
+            <p>Two custom AI agents backed by structured knowledge briefs that encode the style guide, terminology and product context. Every draft still goes through a human review for technical accuracy.</p>
+            <div class="outcome"><p><strong>Result:</strong> first drafts up to 50% faster.</p></div>
+            <ul class="tags" style="margin-top:1rem"><li>Prompt engineering</li><li>Knowledge briefs</li><li>Custom GPTs</li></ul>
+          </article>
+
+          <article class="work">
+            <p class="meta">Python automation</p>
+            <h3>Help Center export and backup</h3>
+            <p>A Python script that crawls the Help Center, keeps links and images intact, captures the release notes and exports everything to Markdown for AI agents, backups and bulk changes.</p>
+            <div class="outcome"><p><strong>Result:</strong> no more support requests to the Help Center platform after each release, and faster updates to the AI agents.</p></div>
+            <ul class="tags" style="margin-top:1rem"><li>Python</li><li>Markdown</li><li>Elevio</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Want to see more?</h2>
+            <p>I'm happy to walk you through more examples in a call.</p>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Tammy Paul logo: Writing, Translation, Consulting" width="84" height="84">
+        <p>Senior Technical Writer<br>Israel · English and Hebrew</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mailto:tammy.s.paul@gmail.com">Email</a></li>
+      </ul>
+      <p class="copyright">© <span id="year">2026</span> Tammy Paul</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

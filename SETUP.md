@@ -127,7 +127,7 @@ To turn on the contact form:
 
 If you move to Netlify:
 
-- In `404.html`, change `/portfolio/` to `/` in the four places it appears. On Netlify, the site is at the root of its domain, not in a subfolder.
+- In `404.html`, change `/portfolio/` to `/` everywhere it appears. On Netlify, the site is at the root of its domain, not in a subfolder.
 - Turn off GitHub Pages (**Settings → Pages**), so that two copies of the site aren't live at the same time.
 
 ## 7. Optional: a custom domain

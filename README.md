@@ -1,6 +1,6 @@
 # Tammy Paul: Technical Writer portfolio
 
-Source for my personal site: https://tam-paul.github.io/portfolio/
+Source for my personal site: https://tammypaul.com/
 
 It's a plain HTML and CSS site with no build step, published with GitHub Pages from the `main` branch.
 

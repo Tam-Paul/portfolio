@@ -32,10 +32,33 @@
 }
 
 /* ---------- Dark theme ----------
-   Used automatically when the visitor's device is set to dark mode.
-   To change a dark-mode color, edit it here. */
+   The theme toggle sets data-theme="light" or "dark" on the <html> element.
+   Until a visitor clicks it, the site follows their device setting.
+   To change a dark-mode color, edit it in BOTH blocks below (they must match). */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e7eef6;
+  --ink-soft: #a7b6c8;
+  --line: #26394f;
+  --paper: #0c1622;
+  --mist: #111e2d;
+  --surface: #142233;
+  --blue-dark: #6cb2ff;
+  --header-bg: rgba(12, 22, 34, .9);
+  --btn-bg: #6cb2ff;
+  --btn-fg: #0c1622;
+  --cta-bg: #16304b;
+  --cta-fg: #ffffff;
+  --cta-muted: #b9c9dc;
+  --status: #3ccf8e;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .3);
+}
+:root[data-theme="dark"] .hero .portrait { border-color: #6cb2ff; } /* photo frame matches links and buttons */
+
+/* Fallback for browsers with scripts turned off: follow the device setting. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --ink: #e7eef6;
     --ink-soft: #a7b6c8;
     --line: #26394f;
@@ -52,7 +75,7 @@
     --status: #3ccf8e;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .3);
   }
-  .hero .portrait { border-color: #6cb2ff; } /* photo frame matches links and buttons */
+  :root:not([data-theme]) .hero .portrait { border-color: #6cb2ff; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -121,9 +144,10 @@ a:hover { color: var(--blue); }
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; min-height: 72px;
+  display: flex; align-items: center; justify-content: flex-start;
+  gap: .75rem; min-height: 72px;
 }
+.site-nav { margin-left: auto; }
 .brand {
   display: flex; align-items: center; gap: .7rem;
   text-decoration: none; color: var(--ink);
@@ -155,12 +179,26 @@ a:hover { color: var(--blue); }
 .site-nav a[aria-current="page"] { background: var(--ink); color: var(--paper); }
 
 @media (max-width: 760px) {
-  .nav-toggle { display: inline-block; }
+  .nav-toggle { display: inline-block; margin-left: auto; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%;
     background: var(--surface); border-bottom: 1px solid var(--line); }
   .site-nav.open { display: block; }
   .site-nav ul { flex-direction: column; padding: .75rem 1.25rem 1rem; }
 }
+
+/* Theme toggle: shows a moon in light mode and a sun in dark mode. */
+.theme-toggle {
+  display: inline-grid; place-items: center; flex-shrink: 0;
+  width: 2.5rem; height: 2.5rem; padding: 0;
+  background: none; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--ink); cursor: pointer;
+}
+.theme-toggle:hover { background: var(--mist); color: var(--blue-dark); }
+.theme-toggle svg { width: 1.2rem; height: 1.2rem; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root:not([data-theme]) .theme-toggle { display: none; } /* hidden if scripts are off */
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -409,12 +447,12 @@ figure.card { margin: 0; }
 /* ---------- Print (résumé prints cleanly) ---------- */
 @media print {
   /* Always print with the light colors, even in dark mode. */
-  :root {
+  :root, :root[data-theme], :root:not([data-theme]) {
     --ink: #12263f; --ink-soft: #4a5b70; --line: #dbe4ef;
     --paper: #ffffff; --mist: #f3f8fd; --surface: #ffffff; --blue-dark: #0b5ed7;
   }
   body { background: #ffffff; }
-  .site-header, .site-footer, .resume-aside nav, .btn, .skip-link { display: none !important; }
+  .site-header, .site-footer, .resume-aside nav, .btn, .skip-link, .theme-toggle { display: none !important; }
   .page-head { padding: 0 0 1rem; background: none; }
   .resume-layout { display: block; }
   body { font-size: 11pt; }
